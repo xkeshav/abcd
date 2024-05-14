@@ -1,8 +1,8 @@
 {
-  "name": "@xkeshav/<project>",
+  "name": "@xkeshav/abcd",
   "version": "0.0.1",
   "displayName": "Project Repository",
-  "description": "This is a <project> repository for any new project in github for typescript; including basic files",
+  "description": "This is a abcd repository for any new project in github for typescript; including basic files",
   "private": false,
   "publisher": "@xkeshav",
   "homepage": "https://github.com/xkeshav/template/blob/main/README.md",
@@ -32,9 +32,17 @@
   },
   "contributors": [],
   "scripts": {
-    "start": "tsc"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "dependencies": { },
+  "dependencies": {
+    "astro": "^4.8.3",
+    "@astrojs/check": "^0.6.0",
+    "typescript": "^5.4.5"
+  },
   "devDependencies":{ 
 		"typescript": "5.3.3"
 	},

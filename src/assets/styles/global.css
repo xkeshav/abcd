@@ -1,0 +1,73 @@
+:root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+        45deg,
+        rgb(var(--accent)),
+        rgb(var(--accent-light)) 30%,
+        white 60%
+    );
+
+    --text: white;
+    --bg: black;
+    --header-h: 6rem;
+    --footer-h: 4rem;
+}
+
+html {
+    font-family: system-ui, sans-serif;
+    background-color: #13151a;
+    background-size: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--text);
+    background-color: var(--bg);
+    height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 6rem;
+    border: 1px solid pink;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+}
+
+main {
+    margin: auto;
+    padding: 1rem;
+    width: 80vw;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+    max-height: max-content;
+    height: calc(100vh - var(--header-h) - var(--footer-h) - 4rem);
+    display: grid;
+    grid-template-rows: 4rem 1fr;
+    grid-auto-flow: row;
+}
+
+footer {
+    padding-inline: 1rem;
+    margin-block: 0.5rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+}
