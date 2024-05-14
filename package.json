@@ -1,0 +1,54 @@
+{
+  "name": "@xkeshav/<project>",
+  "version": "0.0.1",
+  "displayName": "Project Repository",
+  "description": "This is a <project> repository for any new project in github for typescript; including basic files",
+  "private": false,
+  "publisher": "@xkeshav",
+  "homepage": "https://github.com/xkeshav/template/blob/main/README.md",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/xkeshav/template/issues",
+    "email": "xkeshav@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xkeshav/template.git"
+  },
+  "keywords": [
+    "xkeshav", 
+    "typescript",
+    "github",
+    "template"
+  ],
+  "main": "./src/index.js",
+  "author": {
+    "name": "Keshav Mohta",
+    "email": "xkeshav@gmail.com"
+  },
+"funding": {
+    "type": "individual",
+    "url": "http://xkeshav.com"
+  },
+  "contributors": [],
+  "scripts": {
+    "start": "tsc"
+  },
+  "dependencies": { },
+  "devDependencies":{ 
+		"typescript": "5.3.3"
+	},
+  "peerDependencies": { },
+	"browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
