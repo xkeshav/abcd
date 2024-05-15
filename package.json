@@ -16,7 +16,7 @@
     "url": "https://github.com/xkeshav/template.git"
   },
   "keywords": [
-    "xkeshav", 
+    "xkeshav",
     "typescript",
     "github",
     "template"
@@ -26,7 +26,7 @@
     "name": "Keshav Mohta",
     "email": "xkeshav@gmail.com"
   },
-"funding": {
+  "funding": {
     "type": "individual",
     "url": "http://xkeshav.com"
   },
@@ -41,13 +41,17 @@
   "dependencies": {
     "astro": "^4.8.3",
     "@astrojs/check": "^0.6.0",
+    "@astrojs/mdx": "^2.0.0",
+    "@astrojs/partytown": "^2.0.4",
+    "@astrojs/rss": "^4.0.1",
+    "@astrojs/sitemap": "^3.0.3",
     "typescript": "^5.4.5"
   },
-  "devDependencies":{ 
-		"typescript": "5.3.3"
-	},
-  "peerDependencies": { },
-	"browserslist": {
+  "devDependencies": {
+    "typescript": "5.3.3"
+  },
+  "peerDependencies": {},
+  "browserslist": {
     "production": [
       ">0.2%",
       "not dead",

@@ -14,7 +14,7 @@
     "moduleResolution": "node",
     "noEmit": true,
     "noImplicitAny": true,
-		"noImplicitReturns": true,
+    "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "noUnusedParameters": true,
     "resolveJsonModule": true,
@@ -23,6 +23,12 @@
     "target": "ESNext",
     "paths": {
       "@/assets/*": ["src/assets/*"],
+      "@/components/*": ["src/components/*"],
+      "@/layouts/*": ["src/layouts/*.astro"],
+      "@/utils": ["src/utils/index.ts"],
+      "@/types": ["src/types/index.ts"],
+      "@/config": ["src/config.ts"],
+      "@/site-config": ["src/site.config.ts"]
     }
   },
   "include": ["src", "*.ts", "*.tsx"],
