@@ -9,7 +9,11 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "jsxImportSource": "react",
-    "lib": ["es2022", "dom", "dom.iterable"],
+    "lib": [
+      "es2022",
+      "dom",
+      "dom.iterable"
+    ],
     "module": "ESNext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -22,15 +26,39 @@
     "strict": true,
     "target": "ESNext",
     "paths": {
-      "@/assets/*": ["src/assets/*"],
-      "@/components/*": ["src/components/*"],
-      "@/layouts/*": ["src/layouts/*.astro"],
-      "@/utils": ["src/utils/index.ts"],
-      "@/types": ["src/types/index.ts"],
-      "@/config": ["src/config.ts"],
-      "@/site-config": ["src/site.config.ts"]
+      "@/assets/*": [
+        "src/assets/*"
+      ],
+      "@/components/*": [
+        "src/components/*.astro"
+      ],
+      "@/layouts/*": [
+        "src/layouts/*.astro"
+      ],
+      "@/utils": [
+        "src/utils/index.ts"
+      ],
+      "@/types": [
+        "src/types/index.ts"
+      ],
+      "@/config": [
+        "src/config.ts"
+      ],
+      "@/site-config": [
+        "src/site.config.ts"
+      ]
     }
   },
-  "include": ["src", "*.ts", "*.tsx"],
-  "exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist", ".eslintrc.js"]
+  "include": [
+    "src",
+    "*.ts",
+    "*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*",
+    ".vscode",
+    "dist",
+    ".eslintrc.js"
+  ]
 }

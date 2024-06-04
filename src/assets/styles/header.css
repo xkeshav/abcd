@@ -1,14 +1,22 @@
-.header--content {
-  display: flex;
-  flex-flow: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  margin-inline: 3rem;
-}
+@import url('./global.css');
 
-.logo {
-  color: firebrick;
+.header {
+  background-color: #15091d;
+  color: white;
+
+  >.action {
+    display: flex;
+    align-items: center;
+  }
+
+  >.caption {
+    text-align: center;
+  }
+
+  >.option {
+    font-size: larger;
+  }
+
 }
 
 .switch {
