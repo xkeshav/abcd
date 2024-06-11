@@ -13,11 +13,10 @@ type Props =  {
 const { title, list } = Astro.props;
 
 ---
-
-<div >
-    <h1>{title}</h1>
-    <div class="container__alphabet" >
-      {list.map((item) =>  <Letter item={item}></Letter> )}
-    </div>
+<div class="container__alphabet">
+  <h1>{title}</h1>
+  <div class="list"  >
+    {list.map((item) =>  <Letter item={item}></Letter> )}
+  </div>
 </div>
 

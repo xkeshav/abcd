@@ -116,14 +116,7 @@ main {
   max-height: calc(100vh - var(--header-h) - var(--footer-h) - 4rem);
   display: grid;
   grid-auto-flow: row;
-
-  >div {
-    font-size: 10rem;
-  }
-
-  >p {
-    font-size: 4rem;
-  }
+  height: 100dvh;
 }
 
 footer {
