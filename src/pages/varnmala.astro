@@ -2,17 +2,15 @@
 import Alphabet from "@/components/Alphabet";
 import Header from "@/components/Header";
 import Layout from "@/layouts/Layout";
-import { varnmala_english } from '@/utils/common';
-
-const { list } = Astro.props;
-
+import { varnmala_english, varnmala_hindi } from '@/utils/common';
 ---
 
 <Layout title="varnmala" >
-  <Header title="Varnmala">
+  <Header title="Alphabets">
     <div>popover content</div>
   </Header>
   <main>
-    <Alphabet list={varnmala_english} title="Alphabet Page"/>
+    <Alphabet list={varnmala_english} title="English"/>
+    <Alphabet list={varnmala_hindi} title="Hindi"/>
   </main>
 </Layout>
