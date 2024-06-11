@@ -1,6 +1,11 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ],
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
@@ -35,8 +40,8 @@
       "@/layouts/*": [
         "src/layouts/*.astro"
       ],
-      "@/utils": [
-        "src/utils/index.ts"
+      "@/utils/*": [
+        "src/utils/*.ts"
       ],
       "@/types": [
         "src/types/index.ts"

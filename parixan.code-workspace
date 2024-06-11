@@ -57,9 +57,25 @@
     "[html]": {
       "editor.defaultFormatter": "vscode.html-language-features"
     },
-    "eslint.validate": ["mdx", "markdown", "javascript", "javascriptreact", "typescript", "typescriptreact", "astro"],
+    "eslint.validate": [
+      "mdx",
+      "markdown",
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "astro"
+    ],
     "eslint.options": {
-      "extensions": [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx", ".astro"]
+      "extensions": [
+        ".js",
+        ".jsx",
+        ".md",
+        ".mdx",
+        ".ts",
+        ".tsx",
+        ".astro"
+      ]
     },
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
@@ -111,12 +127,15 @@
     "explorer.excludeGitIgnore": false,
     "git.branchPrefix": "feature/",
     "git.branchRandomName.enable": true,
-    "git.branchRandomName.dictionary": ["animals", "numbers"],
+    "git.branchRandomName.dictionary": [
+      "animals",
+      "numbers"
+    ],
     "search.showLineNumbers": true,
     "workbench.editorAssociations": {
       "*.log": "default"
     },
-    "editor.minimap.enabled": false,
+    "editor.minimap.enabled": true,
     "window.zoomLevel": 0,
     "editor.fontSize": 14,
     "[javascriptreact]": {},
@@ -140,7 +159,14 @@
     "markdownlint.config": {
       "MD007": false
     },
-    "cSpell.words": ["headlessui", "heroicons", "Mohta", "nojekyll", "recursivezero", "threadzip"],
+    "cSpell.words": [
+      "headlessui",
+      "heroicons",
+      "Mohta",
+      "nojekyll",
+      "recursivezero",
+      "threadzip"
+    ],
     "css.lint.unknownAtRules": "ignore",
     "files.autoSave": "onFocusChange",
     "editor.dragAndDrop": false,
@@ -158,7 +184,9 @@
     },
     "peacock.affectSideBarBorder": true,
     "prettier.quoteProps": "consistent",
-    "prettier.documentSelectors": ["**/*.astro"],
+    "prettier.documentSelectors": [
+      "**/*.astro"
+    ],
     "[astro]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode",
       "editor.codeActionsOnSave": {
@@ -166,7 +194,10 @@
         "source.organizeImports": "explicit"
       }
     },
-    "git.branchProtection": ["main", "develop"],
+    "git.branchProtection": [
+      "main",
+      "develop"
+    ],
     "git.enableCommitSigning": false,
     "git.postCommitCommand": "push",
     "workbench.tree.enableStickyScroll": false,

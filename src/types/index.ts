@@ -6,3 +6,5 @@ export type SiteConfig = {
   language: string;
   date: any;
 };
+
+export type { LetterEntity } from "./alphabet";
