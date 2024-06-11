@@ -26,16 +26,16 @@
 
   & p {
     font-size: 4rem;
-    margin: 0;
-    padding: 0;
+  }
 
-    & :last-child {
-      font-size: 0.5rem;
-    }
+  ::selection {
+    color: red;
+    background-color: yellow;
+    text-shadow: 5px 5px #558ABB;
   }
 }
 
-@container layout (max-width: 768px) {
+@container layout (width <=768px) {
   .list {
     grid-template-columns: repeat(2, 1fr);
   }
