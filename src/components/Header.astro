@@ -8,6 +8,6 @@ const {title, hasBack = true} = Astro.props;
   <div class="action">{hasBack && <a href="/" class="back">Back</a>}</div> 
   <div class="caption"><h1>{title}</h1></div>
   <div class="option">
-    <slot/>
+    <slot name="option"/>
   </div>
 </header>

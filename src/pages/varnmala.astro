@@ -7,10 +7,13 @@ import { varnmala_english, varnmala_hindi } from '@/utils/common';
 
 <Layout title="varnmala" >
   <Header title="Alphabets">
-    <div>popover content</div>
+    <div slot="option">?</div>
+    
   </Header>
   <main>
     <Alphabet list={varnmala_english} title="English"/>
     <Alphabet list={varnmala_hindi} title="Hindi"/>
   </main>
+  <div id="mypopover" popover>Popover content</div>
 </Layout>
+

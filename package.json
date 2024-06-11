@@ -39,18 +39,20 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.8.3",
     "@astrojs/check": "^0.6.0",
     "@astrojs/mdx": "^2.0.0",
     "@astrojs/partytown": "^2.0.4",
     "@astrojs/rss": "^4.0.1",
     "@astrojs/sitemap": "^3.0.3",
+    "astro": "^4.8.3",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
+    "prettier": "^3.3.2",
+    "prettier-plugin-astro": "^0.14.0",
+    "prettier-plugin-tailwindcss": "^0.6.3",
     "typescript": "5.3.3"
   },
-  "peerDependencies": {},
   "browserslist": {
     "production": [
       ">0.2%",
