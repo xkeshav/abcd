@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Layout from "@/layouts/Layout";
 import Navigation from "@/layouts/Navigation";
+import { pages } from "@/utils/constant";
 ---
 
 <Layout title="abcdkbd.com: kidz">
@@ -11,7 +12,7 @@ import Navigation from "@/layouts/Navigation";
     <div class="switch">dark</div>
   </Header>
 	<main>
-    <Navigation/>
+    <Navigation pages={pages}/>
 	</main>
   <Footer/>
 </Layout>

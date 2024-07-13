@@ -1,0 +1,145 @@
+---
+import "@/assets/styles/panel.css";
+
+---
+
+<style is:inline>
+  .tv { 
+    container-type: inline-size;
+    container-name: main;
+    border: 0.5rem outset pink;
+    outline: 0.5rem solid khaki;
+    box-shadow: 0 0 0 2rem skyblue;
+    border-radius: 12px;
+    font: bold 1rem sans-serif;
+    margin-block: 5rem;
+    margin-inline: 5rem;
+    padding: 1rem;
+    outline-offset: 0.5rem;
+  }
+  
+</style>
+<main class="tv">
+  <section class="scene">
+    <letter-panel>
+      <div class="panel" id="panel"></div>
+    </letter-panel>
+  </section>
+</main>
+<script >
+  console.log('I am inlined right here in the final output HTML.');
+</script>
+<script>
+  enum ArrowKeys {
+      LEFT = 37,
+      UP = 38, 
+      RIGHT = 39,
+      DOWN = 40, 
+  }
+  // Define the behaviour for our new type of HTML element.
+  class LetterPanel extends HTMLElement {
+    #panel;
+    #orientation = 'Y';
+    #selectedIndex = 0;
+    #radius = '0px';
+    #theta= 0
+    #angle = '0deg';
+
+    constructor() {
+      super();
+      this.#panel = this.querySelector("#panel") as HTMLElement;
+      //this.checkPanel();
+      this.#emitEvent();
+    }
+
+    connectedCallback() {
+      this.buildPanel();
+      //this.changePanel(); // TODO: uncomment to see complete letter panel on load
+      this.rotatePanel({by: "X"});
+    }
+
+    #emitEvent() {
+      document.addEventListener("keyup", (e: KeyboardEvent) =>{
+        const { charCode,  code, keyCode, key } = e;
+        console.log({charCode, code, keyCode, key});
+        this.onKeyChange(keyCode);
+      });
+    }
+    
+    doTheMath() {
+      const cellWidth = this.#panel.offsetWidth;
+      const cellCount = 26; //Number(cellRange.value);
+      const halfCell = cellWidth / 2;
+      const divideBy = Math.tan(Math.PI / cellCount);
+      this.#radius = Math.round(halfCell / divideBy) + 'px';
+      this.#theta = 360 / cellCount;
+      this.#angle = this.#theta * this.#selectedIndex + 'deg';
+
+    }
+
+    buildPanel(num = 26)  {
+      const fragment = document.createDocumentFragment();
+      for (let i = 0; i < num; i++) {
+        const div = document.createElement("div");
+        div.classList.add("panel__cell");
+        div.textContent = String.fromCodePoint(65 + i); // A to Z
+        fragment.appendChild(div);
+      }
+      this.#panel.innerHTML = "";
+      this.#panel.appendChild(fragment);
+    }
+
+    changePanel() {
+      //this.buildPanel(cellCount);
+      const cells = document.querySelectorAll(".panel__cell") as unknown as HTMLElement[]
+      this.doTheMath();
+      cells.forEach((cell, i) => {
+        const cellAngle = this.#theta * i;
+        const transformString = `rotate${this.#orientation}(${cellAngle}deg) translateZ(${this.#radius})`;
+        cell.style.transform = transformString;
+      });
+      this.rotatePanel({by: this.#orientation});
+    }
+
+    rotatePanel({ by = "X" })  {
+      this.doTheMath();
+      const transformString = `translateZ(-${this.#radius}) rotate${by}(${this.#angle})`;
+      this.#panel.style.transform = transformString;
+    }
+
+  onKeyChange(code: number)  {
+    switch (code) {
+      case ArrowKeys.RIGHT:{
+        this.#selectedIndex++;
+        this.#orientation = "Y";
+        break;
+      }
+      case ArrowKeys.LEFT:  {
+        this.#selectedIndex--;
+        this.#orientation = "Y";
+        break;
+      }
+      case ArrowKeys.UP:  {
+        this.#selectedIndex++;
+        this.#orientation = "X";
+        break;
+      }
+      case ArrowKeys.DOWN:  {
+        this.#selectedIndex--;
+        this.#orientation = "X";
+        break;
+      }
+      default: {
+        //if (isAlphabet(keyCode)) {
+          this.#selectedIndex = 65 - code;
+        //} else {
+        //  this.#selectedIndex--;
+        //}
+      }
+    }
+    this.changePanel();
+  };
+};
+// Tell the browser to use our LetterPanel class for <letter-panel> elements.
+customElements.define('letter-panel', LetterPanel);
+</script>

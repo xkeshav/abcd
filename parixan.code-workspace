@@ -168,7 +168,7 @@
       "threadzip"
     ],
     "css.lint.unknownAtRules": "ignore",
-    "files.autoSave": "onFocusChange",
+    "files.autoSave": "afterDelay",
     "editor.dragAndDrop": false,
     "editor.tabCompletion": "onlySnippets",
     "editor.formatOnSaveMode": "file",
