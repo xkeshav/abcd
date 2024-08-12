@@ -1,0 +1,38 @@
+---
+import Header from "@/components/Header";
+import Layout from "@/layouts/Layout";
+
+export async function getStaticPaths() {
+  const letters = [
+    {
+      slug: undefined,
+      title: "Letter Store",
+      text: "Welcome to the Letter store!",
+    },
+    {
+      slug: "a",
+      title: "Apple",
+      text: "Apple is best fruit",
+    },
+    {
+      slug: "b",
+      title: "Banana",
+      text: "Banana is wild fruit",
+    },
+  ];
+  
+  return letters.map(({ slug, title, text }) => {
+    return {
+      params: { slug },
+      props: { title, text },
+    };
+  });
+}
+
+const { title, text } = Astro.props;
+---
+<Layout title="varnmala" >
+  <Header title="Varnmala">
+    <div>popover content</div>
+  </Header>
+</Layout> 

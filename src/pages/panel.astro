@@ -1,4 +1,6 @@
 ---
+import Header from "@/components/Header";
+import Layout from "@/layouts/Layout";
 import "@/assets/styles/panel.css";
 
 ---
@@ -19,17 +21,19 @@ import "@/assets/styles/panel.css";
   }
   
 </style>
-<main class="tv">
-  <section class="scene">
-    <letter-panel>
-      <div class="panel" id="panel"></div>
-    </letter-panel>
-  </section>
-</main>
+<Layout title="varnmala" >
+  <Header title="Varnmala">
+    <div>popover content</div>
+  </Header>
+  <main class="tv">
+    <section class="scene">
+      <letter-panel>
+        <div class="panel" id="panel"></div>
+      </letter-panel>
+    </section>
+  </main>
+</Layout>
 <script >
-  console.log('I am inlined right here in the final output HTML.');
-</script>
-<script>
   enum ArrowKeys {
       LEFT = 37,
       UP = 38, 

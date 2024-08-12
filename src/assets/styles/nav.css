@@ -5,7 +5,7 @@ nav {
 }
 
 .nav--list {
-  height: 100%;
+  height: max-content;
   display: grid;
   grid-auto-flow: row;
   grid-gap: 0.5rem;
@@ -57,8 +57,7 @@ nav {
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
   transition: 0.5s;
-  background: linear-gradient(65deg, var(--c1, #f6d365) 20%, var(--c2, #fda085) 31%, var(--c3, #f6d365)) var(--x, 0) /
-    200%;
+  background: linear-gradient(65deg, var(--c1, #f6d365) 20%, var(--c2, #fda085) 31%, var(--c3, #f6d365)) var(--x, 0) / 200%;
   border-radius: 10px;
 }
 
@@ -79,6 +78,7 @@ nav {
 }
 
 @keyframes moving {
+
   from,
   to {
     transform: translateX(0);

@@ -94,7 +94,7 @@
     "zenMode.centerLayout": false,
     "prettier.printWidth": 120,
     "workbench.list.multiSelectModifier": "alt",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "astro-build.astro-vscode",
     "editor.linkedEditing": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "scss.lint.emptyRules": "ignore",
@@ -165,13 +165,14 @@
       "Mohta",
       "nojekyll",
       "recursivezero",
+      "sanyukat",
       "threadzip"
     ],
     "css.lint.unknownAtRules": "ignore",
     "files.autoSave": "afterDelay",
     "editor.dragAndDrop": false,
     "editor.tabCompletion": "onlySnippets",
-    "editor.formatOnSaveMode": "file",
+    "editor.formatOnSaveMode": "modifications",
     "files.eol": "\r\n",
     "files.readonlyExclude": {
       "dist/**": true
@@ -191,7 +192,7 @@
       "editor.defaultFormatter": "esbenp.prettier-vscode",
       "editor.codeActionsOnSave": {
         "source.fixAll": "always",
-        "source.organizeImports": "explicit"
+        "source.organizeImports": "always"
       }
     },
     "git.branchProtection": [
