@@ -1,12 +1,13 @@
 import type { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
-  website: "https://www.abcdkbd.com",
+  website: "https://www.parixan.xyz",
   // Meta property used to construct the meta property (src/components/BaseHead.astro) & the generated satori png (src/pages/og-image/[slug].png.ts)
   author: "Keshav Mohta",
-  title: "abcdkbd.com",
-  description: "A learning pad for kids.",
+  title: "parixan.xyz",
+  description: "A learning material for toddler.",
   language: "en-GB",
+  ogLocale: "en_GB",
   // Date.prototype.toLocaleDateString() parameters, found in src/utils/date.ts.
   date: {
     locale: "en-GB",
@@ -33,9 +34,5 @@ export const menuLinks: Array<{ title: string; path: string }> = [
   {
     title: "Blog",
     path: "/posts/"
-  },
-  {
-    title: "Work",
-    path: "/work/"
   }
 ];

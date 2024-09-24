@@ -1,36 +1,40 @@
 {
   "name": "@xkeshav/abcd",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "displayName": "abcdkbd",
-  "description": "This is a abcd repository for any new project in github for typescript; including basic files",
+  "description": "This is a repository for any new project in github for typescript; including basic files",
   "private": false,
   "publisher": "@xkeshav",
-  "homepage": "https://abcdkbd.com",
-  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://parixan.xyz",
+  "license": "LICENSE",
   "bugs": {
-    "url": "https://github.com/xkeshav/template/issues",
+    "url": "https://github.com/xkeshav/abcd/issues",
     "email": "xkeshav@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xkeshav/template.git"
+    "url": "https://github.com/xkeshav/abcd/template.git"
   },
   "keywords": [
-    "xkeshav",
+    "abcd",
     "typescript",
     "github",
-    "template"
+    "astro"
   ],
-  "main": "./src/index.js",
   "author": {
     "name": "Keshav Mohta",
     "email": "xkeshav@gmail.com"
   },
   "funding": {
     "type": "individual",
-    "url": "http://xkeshav.com"
+    "url": "https://github.com/sponsors/xkeshav"
   },
-  "contributors": [],
+  "contributors": [
+    {
+      "name": "Keshav Mohta",
+      "email": "xkeshav@gmail.com"
+    }
+  ],
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
