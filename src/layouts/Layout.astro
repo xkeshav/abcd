@@ -1,11 +1,11 @@
 ---
+import BaseHead from "@/components/BaseHead";
 import { siteConfig } from "@/site-config";
+import type { SiteMeta } from "@/types";
 
-interface Props {
-	title: string;
-}
+type Props = SiteMeta;
 
-const { title } = Astro.props;
+const { title, ogImage = './alphabet.jpg' } = Astro.props;
 
 const { description } = siteConfig
 ---
@@ -13,12 +13,7 @@ const { description } = siteConfig
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description}/>
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+    <BaseHead title={title} description={description} ogImage={ogImage} />
 	</head>
 	<body class="container">
 		<slot />
