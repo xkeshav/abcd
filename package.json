@@ -1,11 +1,11 @@
 {
   "name": "@xkeshav/abcd",
   "version": "0.0.1",
-  "displayName": "abcdkbd.com Repository",
+  "displayName": "abcdkbd",
   "description": "This is a abcd repository for any new project in github for typescript; including basic files",
   "private": false,
   "publisher": "@xkeshav",
-  "homepage": "https://github.com/xkeshav/template/blob/main/README.md",
+  "homepage": "https://abcdkbd.com",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/xkeshav/template/issues",

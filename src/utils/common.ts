@@ -3,7 +3,7 @@
 // Vowels
 const hindiVowels = Array.from({ length: 16 }, (_, i) => ({ key: 2309 + i, value: String.fromCodePoint(2309 + i) }));
 const extraHindiVowelKey = [2317, 2321];
-const hindiVowelList = hindiVowels.filter((v) => !extraHindiVowelKey.includes(v.key));
+export const hindiVowelList = hindiVowels.filter((v) => !extraHindiVowelKey.includes(v.key));
 
 // Consonants
 // क, ख, ग, घ, ङ // च, छ, ज, झ, ञ // ट, ठ, ड, ढ, ण, // त, थ, द, ध, न, // प, फ, ब, भ, म, // य र, ल, व, // श, ष, स, ह
@@ -15,7 +15,8 @@ const additionalConsonants = [
   String.fromCharCode(2340, 2381, 2352),
   String.fromCharCode(2332, 2381, 2334)
 ];
-const hindiConsonants = Array.from({ length: 37 }, (_, i) => String.fromCodePoint(2325 + i)).concat(
+
+export const hindiConsonants = Array.from({ length: 37 }, (_, i) => String.fromCodePoint(2325 + i)).concat(
   additionalConsonants
 );
 
@@ -49,6 +50,7 @@ export const varnmala_english = Array.from(Array(26), (_, i) => ({
   code: 65 + i,
   letter: String.fromCharCode(65 + i)
 }));
+
 export const varnmala_hindi = varnmala.filter((v) => !extraLetters.includes(v.code));
 
 export const isAlphabet = (key: number) => (65 <= key && key <= 90) || (key >= 97 && key <= 122);

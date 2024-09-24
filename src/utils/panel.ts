@@ -2,8 +2,8 @@ import { isAlphabet } from "./common";
 
 const panel = document.querySelector(".panel") as HTMLElement;
 const cellRange = document.getElementById("range") as HTMLInputElement;
-const orientationPanel = document.querySelectorAll(".orientation");
-const panelOptionDiv = document.querySelector("#panel__options");
+// const orientationPanel = document.querySelectorAll(".orientation");
+// const panelOptionDiv = document.querySelector("#panel__options");
 
 let orientation: string;
 
