@@ -30,7 +30,6 @@
     "editor.suggestSelection": "first",
     "files.exclude": {
       ".git/**": true,
-      ".github/**": true,
       "**/.git": false,
       "**/node_modules/": true,
       "scripts/**": true,
