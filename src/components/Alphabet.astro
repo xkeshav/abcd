@@ -1,0 +1,22 @@
+---
+
+import '@/assets/styles/alphabet.css';
+import Letter from '@/components/Letter';
+import { LetterEntity } from '@/types';
+
+type Props =  {
+  title: string;
+  list: LetterEntity[];
+}
+
+const { title, list } = Astro.props;
+
+---
+
+<div class="container__alphabet">
+  <h1>{title}</h1>
+  <div class="list"  >
+    {list.map((item) =>  <Letter item={item}></Letter> )}
+  </div>
+</div>
+

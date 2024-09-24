@@ -1,0 +1,28 @@
+@import url('./global.css');
+
+.header {
+  background-color: #15091d;
+  color: white;
+
+  >.action {
+    display: flex;
+    align-items: center;
+  }
+
+  >.caption {
+    text-align: center;
+  }
+
+  >.option {
+    font-size: larger;
+  }
+
+}
+
+.switch {
+  background-color: black;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 050%;
+  cursor: pointer;
+}

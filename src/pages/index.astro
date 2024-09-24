@@ -1,22 +1,18 @@
 ---
-
-import '../assets/styles/global.css';
-import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import '@/assets/styles/global.css';
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Layout from "@/layouts/Layout";
+import Navigation from "@/layouts/Navigation";
+import { pages } from "@/utils/constant";
 ---
 
-<Layout title="Welcome kidz">
-	<header >
-		<h1 class="text-gradient">Kid lab</h1>
-	</header>
+<Layout title="abcdkbd.com: kidz">
+  <Header title="Kid lab" hasBack={false}>
+    <div class="switch">dark</div>
+  </Header>
 	<main>
-		<Card href="home" title="home" body="body"/>
+    <Navigation pages={pages}/>
 	</main>
-	<footer> &copy;2024 | RecursiveZero private limited | All rights reserved.</footer>
+  <Footer/>
 </Layout>
-
-<style>
-
-
-
-</style>

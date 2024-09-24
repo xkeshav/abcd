@@ -1,11 +1,11 @@
 {
   "name": "@xkeshav/abcd",
   "version": "0.0.1",
-  "displayName": "Project Repository",
+  "displayName": "abcdkbd",
   "description": "This is a abcd repository for any new project in github for typescript; including basic files",
   "private": false,
   "publisher": "@xkeshav",
-  "homepage": "https://github.com/xkeshav/template/blob/main/README.md",
+  "homepage": "https://abcdkbd.com",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/xkeshav/template/issues",
@@ -16,7 +16,7 @@
     "url": "https://github.com/xkeshav/template.git"
   },
   "keywords": [
-    "xkeshav", 
+    "xkeshav",
     "typescript",
     "github",
     "template"
@@ -26,7 +26,7 @@
     "name": "Keshav Mohta",
     "email": "xkeshav@gmail.com"
   },
-"funding": {
+  "funding": {
     "type": "individual",
     "url": "http://xkeshav.com"
   },
@@ -39,15 +39,40 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.8.3",
     "@astrojs/check": "^0.6.0",
+    "@astrojs/mdx": "^2.0.0",
+    "@astrojs/node": "8.3.2",
+    "@astrojs/partytown": "^2.0.4",
+    "@astrojs/react": "3.6.0",
+    "@astrojs/rss": "^4.0.1",
+    "@astrojs/sitemap": "^3.0.3",
+    "astro": "^4.8.3",
+    "astro-icon": "1.1.0",
+    "clsx": "2.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "typescript": "^5.4.5"
   },
-  "devDependencies":{ 
-		"typescript": "5.3.3"
-	},
-  "peerDependencies": { },
-	"browserslist": {
+  "devDependencies": {
+    "@types/eslint": "8.44.8",
+    "@types/node": "20.10.6",
+    "@types/prettier": "3.0.0",
+    "@types/react": "18.2.47",
+    "@typescript-eslint/eslint-plugin": "6.13.2",
+    "@typescript-eslint/parser": "6.13.2",
+    "eslint": "8.55.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-import-resolver-typescript": "3.6.1",
+    "eslint-plugin-astro": "0.30.0",
+    "eslint-plugin-import": "2.29.0",
+    "eslint-plugin-jsx-a11y": "6.8.0",
+    "eslint-plugin-prettier": "5.0.1",
+    "eslint-plugin-react": "7.33.2",
+    "prettier": "3.1.0",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "5.3.3"
+  },
+  "browserslist": {
     "production": [
       ">0.2%",
       "not dead",

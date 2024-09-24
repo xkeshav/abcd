@@ -1,0 +1,24 @@
+---
+import { LetterEntity } from "@/types";
+
+type Props = {
+  item: LetterEntity;
+}
+
+const { item: { letter, code} } = Astro.props
+
+---
+
+<div class="letter" >
+  <p>{letter}</p>
+  <p data-id="tgt" class="code">{code}</p>
+</div>
+
+<script>
+  const tgt = document.querySelectorAll("[data-id]");
+  tgt?.forEach( elm => elm.addEventListener("click", (e: any) => {
+      console.log("Hello, on client", e?.target?.textContent);
+    })
+  );
+</script>
+

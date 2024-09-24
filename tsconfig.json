@@ -1,6 +1,11 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ],
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
@@ -9,12 +14,16 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "jsxImportSource": "react",
-    "lib": ["es2022", "dom", "dom.iterable"],
+    "lib": [
+      "es2022",
+      "dom",
+      "dom.iterable"
+    ],
     "module": "ESNext",
     "moduleResolution": "node",
     "noEmit": true,
     "noImplicitAny": true,
-		"noImplicitReturns": true,
+    "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "noUnusedParameters": true,
     "resolveJsonModule": true,
@@ -22,9 +31,39 @@
     "strict": true,
     "target": "ESNext",
     "paths": {
-      "@/assets/*": ["src/assets/*"],
+      "@/assets/*": [
+        "src/assets/*"
+      ],
+      "@/components/*": [
+        "src/components/*.astro"
+      ],
+      "@/layouts/*": [
+        "src/layouts/*.astro"
+      ],
+      "@/utils/*": [
+        "src/utils/*.ts"
+      ],
+      "@/types": [
+        "src/types/index.ts"
+      ],
+      "@/config": [
+        "src/config.ts"
+      ],
+      "@/site-config": [
+        "src/site.config.ts"
+      ]
     }
   },
-  "include": ["src", "*.ts", "*.tsx"],
-  "exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist", ".eslintrc.js"]
+  "include": [
+    "src",
+    "*.ts",
+    "*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*",
+    ".vscode",
+    "dist",
+    ".eslintrc.js"
+  ]
 }
