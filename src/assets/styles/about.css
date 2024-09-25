@@ -1,9 +1,9 @@
+@import url('./common.css');
 .container__about {
   padding: 1rem;
 
   >.moto {
     color: #3a8657;
     font-size: 3rem;
-
   }
 }

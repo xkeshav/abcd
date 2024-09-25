@@ -1,8 +1,5 @@
-.text-gradient {
-    background-image: var(--accent-gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
+.hint {
+  padding: 1rem;
+  outline: 1px solid grey;
+  cursor: pointer;
 }

@@ -1,5 +1,6 @@
 ---
 import "@/assets/styles/about.css";
+import "@/assets/styles/dialog.css";
 import Header from "@/components/Header";
 import Layout from "@/layouts/Layout";
 
@@ -7,14 +8,8 @@ import Layout from "@/layouts/Layout";
 
 <Layout title="About Us">
   <Header title="About us">
-    <div >❓</div>
+    <div id="hint" class="hint">❓</div>
   </Header>
-  <dialog id="hint">
-		<button autofocus>Close</button>
-		<p>Hide & Seek.</p>
-		<p>Press any alphabet key from keyboard and that letter will appears and when you press again then it will
-			disappears. see some hover and active effect while hover over each card</p>
-	</dialog>
   <main>
     <div class="container__about">
       <h1>Hello There</h1>
@@ -22,6 +17,25 @@ import Layout from "@/layouts/Layout";
         <p>This is my initial version to make interactive games for kids</p>
         <p>Inspiration behind these games are to take kids away from smartphone and close to keyboard which will help in their future building also. </p>
       </section>
-    </div>
+    <dialog id="info">
+      <button autofocus>Close</button>
+      <p>Hide & Seek.</p>
+      <p>Press any alphabet key from keyboard and that letter will appears and when you press again then it will
+        disappears. see some hover and active effect while hover over each card</p>
+    </dialog>
+  </div>
   </main>
 </Layout>
+
+
+<script>
+  const hint = document.querySelector('#hint');
+  const infoDialog = document.querySelector('dialog');
+  const btn = document.querySelector('dialog > button');
+  hint?.addEventListener('click', ()=>{
+    infoDialog?.showModal();
+  })
+  btn?.addEventListener('click', () =>{
+    infoDialog?.close();
+  })
+</script>
