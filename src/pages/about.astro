@@ -1,20 +1,27 @@
 ---
+import "@/assets/styles/about.css";
 import Header from "@/components/Header";
 import Layout from "@/layouts/Layout";
+
 ---
 
 <Layout title="About Us">
-  <Header>
-    <div>popover content</div>
+  <Header title="About us">
+    <div popovertarget="hint">❓</div>
   </Header>
+  <div popover id="hint">
+		<button autofocus>Close</button>
+		<p>Hide & Seek.</p>
+		<p>Press any alphabet key from keyboard and that letter will appears and when you press again then it will
+			disappears. see some hover and active effect while hover over each card</p>
+	</div>
   <main>
-    <div>
+    <div class="container__about">
       <h1>Hello There</h1>
-      <p>This is my initial version to make interactive games for kids</p>
-      <p>
-        Inspiration behind these games are to take kids away from smartphone and close to keyboard which will help in
-        their future building also.
-      </p>
+      <section class="moto">
+        <p>This is my initial version to make interactive games for kids</p>
+        <p>Inspiration behind these games are to take kids away from smartphone and close to keyboard which will help in their future building also. </p>
+      </section>
     </div>
   </main>
 </Layout>

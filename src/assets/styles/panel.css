@@ -19,7 +19,6 @@
   --tz: 288px;
 }
 
-
 main {
   display: grid;
   grid-template-areas: 'option' 'panel';
