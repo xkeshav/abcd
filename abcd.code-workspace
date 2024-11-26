@@ -23,7 +23,8 @@
       "titleBar.activeForeground": "#15202b",
       "titleBar.inactiveBackground": "#33ee4499",
       "titleBar.inactiveForeground": "#15202b99",
-      "sideBar.border": "#62f26f"
+      "sideBar.border": "#62f26f",
+      "tab.activeBorder": "#62f26f"
     },
     "peacock.color": "#33ee44",
     "workbench.colorTheme": "Firefox Dark",
@@ -121,7 +122,7 @@
       "tsconfig.json": "tsconfig.*.json, jsconfig.json",
       "package.json": "package-lock.json",
       ".gitignore": ".prettier*, .editorconfig, .eslint*, .npm*, .nojekyll",
-      "readme.md": "*.md",
+      "README.md": "*.md",
       "astro.config.mjs": "*.config.js, *.config.ts, *.config.mjs"
     },
     "git.enableSmartCommit": true,
@@ -209,6 +210,7 @@
     "editor.stickyScroll.enabled": true,
     "workbench.editor.pinnedTabSizing": "compact",
     "prettier.trailingComma": "none",
-    "editor.inlayHints.enabled": "offUnlessPressed"
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "typescript.tsdk": "node_modules/typescript/lib"
   }
 }

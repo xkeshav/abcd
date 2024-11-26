@@ -1,4 +1,4 @@
-:root {
+/*:root {
   --accent: 136, 58, 234;
   --accent-light: 224, 204, 250;
   --accent-dark: 49, 10, 101;
@@ -6,7 +6,6 @@
   color-scheme: light dark;
   --text: white;
   --bg: #13151a;
-  /*border color */
   --bc: #deaeaed1;
   --header-h: 6rem;
   --footer-h: 4rem;
@@ -28,6 +27,8 @@ body {
   background-color: var(--bg);
   font-size: 16px;
 }
+
+*/
 
 /* custom fonts */
 @supports font-format(woff2) {
@@ -96,7 +97,7 @@ header {
 }
 
 a {
-  color: light-dark(#f5f2f2, white);
+  color: light-dark(#151414, white);
 }
 
 h1 {

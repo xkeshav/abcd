@@ -3,8 +3,9 @@ import '@/assets/styles/global.css';
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Layout from "@/layouts/Layout";
-import Navigation from "@/layouts/Navigation";
+import Sidebar from "@/layouts/Sidebar";
 import { pages } from "@/utils/constant";
+
 ---
 
 <Layout title="parixan: abcd">
@@ -12,7 +13,8 @@ import { pages } from "@/utils/constant";
     <div class="switch">dark</div>
   </Header>
 	<main>
-    <Navigation pages={pages}/>
+    <!--<Navigation pages={pages}/>-->
+    <Sidebar pages={pages}/>
 	</main>
   <Footer/>
 </Layout>
