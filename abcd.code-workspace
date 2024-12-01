@@ -138,7 +138,7 @@
     "workbench.editorAssociations": {
       "*.log": "default"
     },
-    "editor.minimap.enabled": true,
+    "editor.minimap.enabled": false,
     "window.zoomLevel": 0,
     "editor.fontSize": 14,
     "[javascriptreact]": {},
@@ -211,6 +211,9 @@
     "workbench.editor.pinnedTabSizing": "compact",
     "prettier.trailingComma": "none",
     "editor.inlayHints.enabled": "offUnlessPressed",
-    "typescript.tsdk": "node_modules/typescript/lib"
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "[xml]": {
+      "editor.defaultFormatter": "redhat.vscode-xml"
+    }
   }
 }

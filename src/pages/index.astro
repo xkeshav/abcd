@@ -3,7 +3,7 @@ import '@/assets/styles/global.css';
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Layout from "@/layouts/Layout";
-import Sidebar from "@/layouts/Sidebar";
+import Navigation from "@/layouts/Navigation";
 import { pages } from "@/utils/constant";
 
 ---
@@ -13,8 +13,8 @@ import { pages } from "@/utils/constant";
     <div class="switch">dark</div>
   </Header>
 	<main>
-    <!--<Navigation pages={pages}/>-->
-    <Sidebar pages={pages}/>
+    <Navigation pages={pages}/>
+    <!--<Sidebar pages={pages}/>-->
 	</main>
   <Footer/>
 </Layout>

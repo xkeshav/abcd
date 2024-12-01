@@ -1,0 +1,106 @@
+---
+import "@/assets/styles/theme.css";
+import AstroIcon from "@/components/AstroIcon";
+import arrowAVG from "../../public/icons/arrow.svg?raw"
+import toggleSVG from "../../public/icons/toggle.svg?raw"
+---
+
+<button popovertarget="nav" popovertargetaction="toggle">
+  <AstroIcon name="name" title="ham"/>
+</button>
+<div class="layout">
+  <aside popover="auto" id="nav">
+    <button popovertarget="nav" popovertargetaction="hide" class="hider" aria-label="Close drawer">
+      <span class="sr-only">Close drawer</span>
+    </button>
+    <nav>
+      <ul>
+        <li><a href="#">Alpha</a></li>
+        <li><a href="#">Beta</a></li>
+        <li><a href="#">Charlie</a></li>
+      </ul>
+    </nav>
+    <div class="actions">
+      <button class="theme-toggle">
+        <Fragment set:html={toggleSVG}>
+      </button>
+      <button class="placement-toggle">
+          <AstroIcon name="arrow" title="arrow"/>
+      </button>
+      <button class="debug-toggle">
+        <AstroIcon name="eye" title="eye"/>
+      </button>
+    </div>
+  </aside>
+</div>
+
+<script>
+  // codepen: https://codepen.io/xkeshav/pen/GgKKBWm
+  const popover = document.querySelector("#nav") as HTMLElement;
+  const themer = document.querySelector(".theme-toggle") as HTMLElement;
+  const debug = document.querySelector(".debug-toggle") as HTMLElement;
+  const placer = document.querySelector(".placement-toggle") as HTMLElement;
+  const hider = document.querySelector(".hider") as HTMLElement;
+
+  const config = {
+    theme: "system",
+    debug: String(false)
+  };
+  const themeOptions = ["system", "light", "dark"];
+
+  let debounce: any;
+  document.documentElement.dataset.resizing = String(false);
+  document.documentElement.dataset.theme = "system";
+  document.documentElement.dataset.placement = "top";
+
+  window.addEventListener("resize", () => {
+    if (popover.matches(":popover-open")) popover.hidePopover();
+    document.documentElement.dataset.resizing = String(true);
+    if (debounce) clearTimeout(debounce);
+    debounce = setTimeout(() => {
+      document.documentElement.dataset.resizing = String(false);
+    }, 200);
+  });
+
+  const switchPlace = () => {
+    document.documentElement.dataset.placement =
+      document.documentElement.dataset.placement === "top" ? "bottom" : "top";
+  };
+  placer.addEventListener("click", switchPlace);
+
+  let themeIndex = 0;
+  const switchTheme = () => {
+    themeIndex += 1;
+    config.theme = themeOptions[themeIndex % 3];
+    sync();
+  };
+
+  themer.addEventListener("click", switchTheme);
+
+  const switchDebug = () => {
+    Object.assign(config, { debug: config.debug === "true" ? "false" : "true" });
+    sync();
+  };
+
+  debug.addEventListener("click", switchDebug);
+
+  const update = () => {
+    document.documentElement.dataset.theme = config.theme;
+    document.documentElement.dataset.debug = config.debug;
+  };
+
+  const sync = () => {
+    if (!document.startViewTransition) return update();
+    document.startViewTransition(() => update());
+  };
+
+  update();
+  hider.removeAttribute("popovertargetaction");
+  const reset = () => {
+    document.documentElement.dataset.complete = "false";
+    document.documentElement.style.setProperty("--complete", "0");
+    popover.style.setProperty("--ty", "0");
+  };
+
+  popover.addEventListener("toggle", reset);
+</script>

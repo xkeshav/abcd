@@ -211,8 +211,7 @@
       outline: 4px dashed rgb(13, 255, 0);
     }
 
-    .actions {
-      background-color: darkslategrey;
+        .actions {
       justify-content: flex-end;
       position: absolute;
       bottom: 0;
@@ -405,7 +404,6 @@
     display: flex;
     gap: 0 0.25rem;
     padding-inline: 0.5rem;
-    background-color: darkslategrey;
 
     button {
       width: 44px;
