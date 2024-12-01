@@ -3,10 +3,12 @@
 interface Props {
   name: string
 	title: string;
-	classes?: string[];
-	href?: string;
 }
 
-const { href, classes, title } = Astro.props;
+const { name, title } = Astro.props;
+console.log({name, title})
 ---
 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <use href=`/icons/${title}.svg#${title}`  />
+</svg>
