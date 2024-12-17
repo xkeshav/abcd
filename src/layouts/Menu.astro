@@ -1,11 +1,22 @@
 ---
 import "@/assets/styles/theme.css";
-import AstroIcon from "@/components/AstroIcon";
-import toggleSVG from "../../public/icons/toggle.svg?raw";
+import HamIcon from "@/assets/icons/ham.svg";
+import ArrowIcon from "@/assets/icons/arrow.svg";
+import ToggleIcon from "@/assets/icons/toggle.svg";
+
+import type { Page } from "../models/page";
+import Link from "./Link.astro";
+
+interface Props {
+  pages: Page[];
+}
+
+const {pages} = Astro.props;
+
 ---
 
 <button popovertarget="nav" popovertargetaction="toggle">
-  <AstroIcon name="name" title="ham" />
+  <HamIcon width={24} height={24} />
 </button>
 <div class="layout">
   <aside popover="auto" id="nav">
@@ -14,32 +25,20 @@ import toggleSVG from "../../public/icons/toggle.svg?raw";
     </button>
     <nav>
       <ul>
-        <li><a href="#">Alpha</a></li>
-        <li><a href="#">Beta</a></li>
-        <li><a href="#">Charlie</a></li>
+        <li>{pages?.filter((p:Page)=>p.isActive).map( (p: Page) => <a href={p.path} title={p.name}>{p.name}</a>)}</li>
       </ul>
     </nav>
     <div class="actions">
       <button class="theme-toggle">
-        <Fragment set:html={toggleSVG} />
-        <button class="placement-toggle">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            height="24"
-            width="24"
-          >
-            <title>menu position arrow</title>
-            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"></path>
-          </svg>
-        </button>
+        <ToggleIcon width={24} height={24}  />
+      </button>
+
+      <button class="placement-toggle">
+        <ArrowIcon width={24} height={24} />
       </button>
     </div>
   </aside>
-
+</div>
   <script>
     // codepen: https://codepen.io/xkeshav/pen/GgKKBWm
     const popover = document.querySelector("#nav") as HTMLElement;
@@ -103,4 +102,3 @@ import toggleSVG from "../../public/icons/toggle.svg?raw";
 
     popover.addEventListener("toggle", reset);
   </script>
-</div>
