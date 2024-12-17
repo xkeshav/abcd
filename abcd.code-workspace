@@ -138,7 +138,7 @@
     "workbench.editorAssociations": {
       "*.log": "default"
     },
-    "editor.minimap.enabled": false,
+    "editor.minimap.enabled": true,
     "window.zoomLevel": 0,
     "editor.fontSize": 14,
     "[javascriptreact]": {},

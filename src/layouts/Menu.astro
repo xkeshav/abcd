@@ -1,12 +1,11 @@
 ---
 import "@/assets/styles/theme.css";
 import AstroIcon from "@/components/AstroIcon";
-import arrowAVG from "../../public/icons/arrow.svg?raw"
-import toggleSVG from "../../public/icons/toggle.svg?raw"
+import toggleSVG from "../../public/icons/toggle.svg?raw";
 ---
 
 <button popovertarget="nav" popovertargetaction="toggle">
-  <AstroIcon name="name" title="ham"/>
+  <AstroIcon name="name" title="ham" />
 </button>
 <div class="layout">
   <aside popover="auto" id="nav">
@@ -22,85 +21,86 @@ import toggleSVG from "../../public/icons/toggle.svg?raw"
     </nav>
     <div class="actions">
       <button class="theme-toggle">
-        <Fragment set:html={toggleSVG}>
-      </button>
-      <button class="placement-toggle">
-          <AstroIcon name="arrow" title="arrow"/>
-      </button>
-      <button class="debug-toggle">
-        <AstroIcon name="eye" title="eye"/>
+        <Fragment set:html={toggleSVG} />
+        <button class="placement-toggle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            height="24"
+            width="24"
+          >
+            <title>menu position arrow</title>
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"></path>
+          </svg>
+        </button>
       </button>
     </div>
   </aside>
+
+  <script>
+    // codepen: https://codepen.io/xkeshav/pen/GgKKBWm
+    const popover = document.querySelector("#nav") as HTMLElement;
+    const themer = document.querySelector(".theme-toggle") as HTMLElement;
+    const placer = document.querySelector(".placement-toggle") as HTMLElement;
+    const hider = document.querySelector(".hider") as HTMLElement;
+
+    const config = {
+      theme: "system",
+      debug: String(false)
+    };
+    const themeOptions = ["system", "light", "dark"];
+
+    let debounce: any;
+    document.documentElement.dataset.resizing = String(false);
+    document.documentElement.dataset.theme = "system";
+    document.documentElement.dataset.placement = "top";
+
+    window.addEventListener("resize", () => {
+      if (popover.matches(":popover-open")) popover.hidePopover();
+      document.documentElement.dataset.resizing = String(true);
+      if (debounce) clearTimeout(debounce);
+      debounce = setTimeout(() => {
+        document.documentElement.dataset.resizing = String(false);
+      }, 200);
+    });
+
+    const switchPlace = () => {
+      document.documentElement.dataset.placement =
+        document.documentElement.dataset.placement === "top" ? "bottom" : "top";
+    };
+    placer.addEventListener("click", switchPlace);
+
+    let themeIndex = 0;
+    const switchTheme = () => {
+      themeIndex += 1;
+      config.theme = themeOptions[themeIndex % 3];
+      sync();
+    };
+
+    themer.addEventListener("click", switchTheme);
+
+
+    const update = () => {
+      document.documentElement.dataset.theme = config.theme;
+      document.documentElement.dataset.debug = config.debug;
+    };
+
+    const sync = () => {
+      if (!document.startViewTransition) return update();
+      document.startViewTransition(() => update());
+    };
+
+    update();
+    hider.removeAttribute("popovertargetaction");
+    const reset = () => {
+      document.documentElement.dataset.complete = "false";
+      document.documentElement.style.setProperty("--complete", "0");
+      popover.style.setProperty("--ty", "0");
+    };
+
+    popover.addEventListener("toggle", reset);
+  </script>
 </div>
-
-<script>
-  // codepen: https://codepen.io/xkeshav/pen/GgKKBWm
-  const popover = document.querySelector("#nav") as HTMLElement;
-  const themer = document.querySelector(".theme-toggle") as HTMLElement;
-  const debug = document.querySelector(".debug-toggle") as HTMLElement;
-  const placer = document.querySelector(".placement-toggle") as HTMLElement;
-  const hider = document.querySelector(".hider") as HTMLElement;
-
-  const config = {
-    theme: "system",
-    debug: String(false)
-  };
-  const themeOptions = ["system", "light", "dark"];
-
-  let debounce: any;
-  document.documentElement.dataset.resizing = String(false);
-  document.documentElement.dataset.theme = "system";
-  document.documentElement.dataset.placement = "top";
-
-  window.addEventListener("resize", () => {
-    if (popover.matches(":popover-open")) popover.hidePopover();
-    document.documentElement.dataset.resizing = String(true);
-    if (debounce) clearTimeout(debounce);
-    debounce = setTimeout(() => {
-      document.documentElement.dataset.resizing = String(false);
-    }, 200);
-  });
-
-  const switchPlace = () => {
-    document.documentElement.dataset.placement =
-      document.documentElement.dataset.placement === "top" ? "bottom" : "top";
-  };
-  placer.addEventListener("click", switchPlace);
-
-  let themeIndex = 0;
-  const switchTheme = () => {
-    themeIndex += 1;
-    config.theme = themeOptions[themeIndex % 3];
-    sync();
-  };
-
-  themer.addEventListener("click", switchTheme);
-
-  const switchDebug = () => {
-    Object.assign(config, { debug: config.debug === "true" ? "false" : "true" });
-    sync();
-  };
-
-  debug.addEventListener("click", switchDebug);
-
-  const update = () => {
-    document.documentElement.dataset.theme = config.theme;
-    document.documentElement.dataset.debug = config.debug;
-  };
-
-  const sync = () => {
-    if (!document.startViewTransition) return update();
-    document.startViewTransition(() => update());
-  };
-
-  update();
-  hider.removeAttribute("popovertargetaction");
-  const reset = () => {
-    document.documentElement.dataset.complete = "false";
-    document.documentElement.style.setProperty("--complete", "0");
-    popover.style.setProperty("--ty", "0");
-  };
-
-  popover.addEventListener("toggle", reset);
-</script>
