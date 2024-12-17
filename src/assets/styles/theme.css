@@ -366,8 +366,13 @@
     display: block;
   }
 
-  .debug-toggle g {
-    display: none;
+    [data-theme='light'] .placement-toggle,
+    [data-theme='system'] .placement-toggle {
+      color: black;
+    }
+  
+    [data-theme='dark'] .placement-toggle {
+      color: white;
   }
 
   [data-debug='false'] .debug-toggle g:first-of-type {
