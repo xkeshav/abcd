@@ -215,7 +215,6 @@
     "[xml]": {
       "editor.defaultFormatter": "redhat.vscode-xml"
     },
-    "scss.format.enable": false,
-    "css.format.spaceAroundSelectorSeparator": true
+    "scss.format.enable": false
   }
 }

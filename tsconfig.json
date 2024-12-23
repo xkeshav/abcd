@@ -8,6 +8,7 @@
     ],
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
     "baseUrl": ".",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -57,7 +58,8 @@
   "include": [
     "src",
     "*.ts",
-    "*.tsx"
+    "*.tsx",
+    "src/**/*.astro"
   ],
   "exclude": [
     "node_modules",

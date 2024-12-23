@@ -1,0 +1,78 @@
+:root {
+  --primary-color: #4caf50;
+  --secondary-color: #ffffff;
+  --bg-color: #f7f7f7;
+  --font-family: 'Arial', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+header h1 {
+  margin: 0;
+}
+
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+.categories button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.categories button:hover {
+  background-color: #3e8e41;
+}
+
+.grid {
+  display: grid;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border: 1px solid #ddd;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.cell:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.theme-toggler {
+  padding: 5px 10px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+}

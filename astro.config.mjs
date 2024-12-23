@@ -1,4 +1,5 @@
 import partytown from "@astrojs/partytown";
+import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import { defineConfig } from "astro/config";
 
@@ -10,7 +11,7 @@ export default defineConfig({
     responsiveImages: true,
     svg: true
   },
-  integrations: [sitemap({ entryLimit: 10000 }), partytown()],
+  integrations: [sitemap({ entryLimit: 10000 }), partytown(), react({ experimentalReactChildren: true })],
   image: {
     domains: []
   }
