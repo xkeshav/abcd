@@ -6,27 +6,27 @@
   ],
   "settings": {
     "workbench.colorCustomizations": {
-      "activityBar.activeBackground": "#62f26f",
-      "activityBar.background": "#62f26f",
-      "activityBar.foreground": "#15202b",
-      "activityBar.inactiveForeground": "#15202b99",
-      "activityBarBadge.background": "#9389f5",
-      "activityBarBadge.foreground": "#15202b",
-      "commandCenter.border": "#15202b99",
-      "sash.hoverBorder": "#62f26f",
-      "statusBar.background": "#33ee44",
-      "statusBar.foreground": "#15202b",
-      "statusBarItem.hoverBackground": "#12dc25",
-      "statusBarItem.remoteBackground": "#33ee44",
-      "statusBarItem.remoteForeground": "#15202b",
-      "titleBar.activeBackground": "#33ee44",
-      "titleBar.activeForeground": "#15202b",
-      "titleBar.inactiveBackground": "#33ee4499",
-      "titleBar.inactiveForeground": "#15202b99",
-      "sideBar.border": "#62f26f",
-      "tab.activeBorder": "#62f26f"
+      "activityBar.activeBackground": "#334c67",
+      "activityBar.background": "#334c67",
+      "activityBar.foreground": "#e7e7e7",
+      "activityBar.inactiveForeground": "#e7e7e799",
+      "activityBarBadge.background": "#150b10",
+      "activityBarBadge.foreground": "#e7e7e7",
+      "commandCenter.border": "#e7e7e799",
+      "sash.hoverBorder": "#334c67",
+      "statusBar.background": "#223345",
+      "statusBar.foreground": "#e7e7e7",
+      "statusBarItem.hoverBackground": "#334c67",
+      "statusBarItem.remoteBackground": "#223345",
+      "statusBarItem.remoteForeground": "#e7e7e7",
+      "titleBar.activeBackground": "#223345",
+      "titleBar.activeForeground": "#e7e7e7",
+      "titleBar.inactiveBackground": "#22334599",
+      "titleBar.inactiveForeground": "#e7e7e799",
+      "sideBar.border": "#334c67",
+      "tab.activeBorder": "#334c67"
     },
-    "peacock.color": "#33ee44",
+    "peacock.color": "#223345",
     "workbench.colorTheme": "Firefox Dark",
     "editor.suggestSelection": "first",
     "files.exclude": {
@@ -211,10 +211,6 @@
     "workbench.editor.pinnedTabSizing": "compact",
     "prettier.trailingComma": "none",
     "editor.inlayHints.enabled": "offUnlessPressed",
-    "typescript.tsdk": "node_modules/typescript/lib",
-    "[xml]": {
-      "editor.defaultFormatter": "redhat.vscode-xml"
-    },
-    "scss.format.enable": false
+    "typescript.tsdk": "node_modules/typescript/lib"
   }
 }
