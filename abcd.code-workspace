@@ -23,7 +23,8 @@
       "titleBar.activeForeground": "#e7e7e7",
       "titleBar.inactiveBackground": "#a423e499",
       "titleBar.inactiveForeground": "#e7e7e799",
-      "sideBar.border": "#b750ea"
+      "sideBar.border": "#b750ea",
+      "tab.activeBorder": "#b750ea"
     },
     "peacock.color": "#a423e4",
     "workbench.colorTheme": "Firefox Dark",
