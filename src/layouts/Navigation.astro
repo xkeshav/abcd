@@ -1,7 +1,7 @@
 ---
 
-import "@/assets/styles/nav.css";
-import { Page } from "../models/page";
+//import "@/assets/styles/nav.css";
+import type{ Page } from "../models/page";
 import Link from "./Link.astro";
 
 interface Props {
@@ -13,7 +13,11 @@ const { pages } = Astro.props;
 
 ---
 <nav class="nav">
-  <div class="nav--list">
-    {pages.filter(p=>p.isActive).map( (p) => <Link href={p.path} name={p.name} />)}
-  </div>
+  <ul class="nav--list">
+    {pages.filter(p=>p.isActive).map( (p) => (
+    <li class="nav--list__item">
+      <Link href={p.path} name={p.name} />
+    </li>
+    ))}
+  </ul>
 </nav>

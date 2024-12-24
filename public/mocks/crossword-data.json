@@ -1,0 +1,42 @@
+{
+  "categories": [
+    "cities",
+    "animals",
+    "countries"
+  ],
+  "words": {
+    "cities": [
+      {
+        "name": "jaipur"
+      },
+      {
+        "name": "delhi"
+      },
+      {
+        "name": "mumbai"
+      }
+    ],
+    "animals": [
+      {
+        "name": "tiger"
+      },
+      {
+        "name": "lion"
+      },
+      {
+        "name": "zebra"
+      }
+    ],
+    "countries": [
+      {
+        "name": "india"
+      },
+      {
+        "name": "china"
+      },
+      {
+        "name": "japan"
+      }
+    ]
+  }
+}

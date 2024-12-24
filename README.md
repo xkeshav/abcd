@@ -2,6 +2,8 @@
 
 A Interactive game for kids ; building in Astro
 
+## Live at https://parixan.xyz
+
 ## How to start
 
 - Navigate to the repo from terminal

@@ -12,7 +12,6 @@ interface Props {
 
 const {pages} = Astro.props;
 
-
 ---
 
 <button popovertarget="nav" popovertargetaction="toggle">
@@ -32,11 +31,6 @@ const {pages} = Astro.props;
       <ul>
         <li>{pages && (pages as unknown as Page[]).filter((p:Page)=>p.isActive).map( (p: Page) => <Link href={p.path} name={p.name} />)}</li>
       </ul>
-      <!--<ul>
-        <li><a href="#">Alpha</a></li>
-        <li><a href="#">Beta</a></li>
-        <li><a href="#">Charlie</a></li>
-      </ul>-->
     </nav>
     <div class="actions">
       <button class="theme-toggle">

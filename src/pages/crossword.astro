@@ -1,0 +1,22 @@
+---
+
+import "@/assets/styles/puzzle.css";
+import crosswordData from '../../public/mocks/crossword-data.json';
+import WordSearchPuzzle from "../more/Puzzle.tsx";
+
+const categories = crosswordData.categories;
+let selectedCategory = null;
+let words: any= [];
+
+
+const selectCategory = (category: string) => {
+  selectedCategory = category;
+  words = (crosswordData as any).words[category] || [];
+};
+
+---
+
+  <div class="container">
+    <WordSearchPuzzle client:load/>
+  </div>
+
