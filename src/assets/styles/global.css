@@ -1,9 +1,8 @@
-/*:root {
+:root {
   --accent: 136, 58, 234;
   --accent-light: 224, 204, 250;
   --accent-dark: 49, 10, 101;
   --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
-  color-scheme: light dark;
   --text: white;
   --bg: #13151a;
   --bc: #deaeaed1;
@@ -23,12 +22,10 @@ html {
 }
 
 body {
-  color: var(--text);
-  background-color: var(--bg);
   font-size: 16px;
 }
 
-*/
+
 
 /* custom fonts */
 @supports font-format(woff2) {
@@ -94,6 +91,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding-inline: 1rem;
+  width: 100%;
 }
 
 a {

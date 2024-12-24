@@ -46,10 +46,8 @@
     inset: unset;
     display: flex;
     flex-direction: column;
-    position: static;
     width: var(--sidebar-width);
     margin: 0;
-    position: sticky;
     flex-shrink: 0;
     right: 100%;
     top: var(--header-height);
@@ -343,6 +341,7 @@
       padding: 0;
       place-items: center;
       border: 0;
+      color: red;
 
       svg {
         opacity: calc(0.625 + var(--active, 0));
