@@ -1,0 +1,45 @@
+/* custom fonts */
+@supports font-format(woff2) {
+  @font-face {
+    font-family: "sportrop";
+    src: url("/fonts/sportrop-webfont.woff2") format("woff2"),
+      url("/fonts/sportrop-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "atkinson";
+    src: url("/fonts/atkinson-hyperlegible-regular-102-webfont.woff2") format("woff2"),
+      url("/fonts/atkinson-hyperlegible-regular-102-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "MudraMohta";
+    src: url("/fonts/Mudra_Mohta-Regular.woff2") format("woff2"),
+      url("/fonts//Mudra_Mohta-Regular.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+@font-face {
+  font-family: "boisuStroke";
+  src: url("/fonts/Boisu-Stroke.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Bold.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

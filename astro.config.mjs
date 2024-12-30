@@ -11,7 +11,11 @@ export default defineConfig({
     responsiveImages: true,
     svg: true
   },
-  integrations: [sitemap({ entryLimit: 10000 }), partytown(), react({ experimentalReactChildren: true })],
+  integrations: [
+    sitemap({ entryLimit: 10000 }), 
+    partytown(), 
+    react({ experimentalReactChildren: true })
+  ],
   image: {
     domains: []
   }
